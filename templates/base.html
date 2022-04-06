@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% block head %}
+    {% endblock %}
+
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='icons/favicon.png')}}"sizes="32x32">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/index.css')}}">
+</head>
+
+<header>
+    Do your reps
+</header>
+
+<body>
+<div id="main">
+{% block body %}
+
+{%endblock%}
+</div>
+<footer>
+    Unafilited with Gambs
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+<title>The Gambs VNDB Recommendation Engine</title>
+{% endblock %}
+
+{% block body %}
+
+<form action="{{url_for('recommendation')}}">
+
+    <input type="text" name="id"><br>
+
+    <input type="radio" name="type" id="recommend_to_users" value="recommend_to_users" checked>
+    <label for="recommend_to_users">Reccomend to user</label><br>
+
+    <input type="radio" name="type" id="similar_vns" value="similar_vns">
+    <label for="similar_vns">Similar VN</label><br>
+
+    <input type="radio" name="type" id="similar_users" value="similar_users">
+    <label for="similar_users">Similar users</label><br>
+
+    <input type="submit" value="Ask Gambs-sama">
+</form>
+
+
+{% endblock %}
